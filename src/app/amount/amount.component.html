@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="row justify-content-center" style="padding-top: 20%;padding-left:20%;">
+        <div class="col col-6">
+            <div *ngIf="cards">
+                Your account balance is: {{cards.balance}} 2000:{{note2000}},500:{{note500}},100:{{note100}}
+            </div>
+            <form>
+                <div class="row ">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Enter Amount" #amount>
+                        </div>
+                    </div>
+                </div>
+                <div class="row ">
+                    <button i18n type="submit" class="btn btn-primary" (click)="submit(amount.value); amount.value=''">Enter</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
